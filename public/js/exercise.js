@@ -12,7 +12,8 @@ const distanceInput = document.querySelector("#distance");
 const completeButton = document.querySelector("button.complete");
 const addButton = document.querySelector("button.add-another");
 const toast = document.querySelector("#toast");
-const newWorkout = document.querySelector(".new-workout")
+// eslint-disable-next-line no-unused-vars
+const newWorkout = document.querySelector(".new-workout");
 
 let workoutType = null;
 let shouldNavigateAway = false;
@@ -21,13 +22,12 @@ async function initExercise() {
   let workout;
 
   if (location.search.split("=")[1] === undefined) {
-    workout = await API.createWorkout()
-    console.log(workout)
+    workout = await API.createWorkout();
+    console.log(workout);
   }
   if (workout) {
     location.search = "?id=" + workout._id;
   }
-
 }
 
 initExercise();
@@ -98,7 +98,7 @@ function validateInputs() {
 async function handleFormSubmit(event) {
   event.preventDefault();
 
-  let workoutData = {};
+  const workoutData = {};
 
   if (workoutType === "cardio") {
     workoutData.type = "cardio";
@@ -141,7 +141,7 @@ if (workoutTypeSelect) {
   workoutTypeSelect.addEventListener("change", handleWorkoutTypeChange);
 }
 if (completeButton) {
-  completeButton.addEventListener("click", function (event) {
+  completeButton.addEventListener("click", event => {
     shouldNavigateAway = true;
     handleFormSubmit(event);
   });

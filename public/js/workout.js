@@ -1,4 +1,4 @@
-/* eslint-disable no-alert */
+/* eslint-disable */
 async function initWorkout() {
   const lastWorkout = await API.getLastWorkout();
   console.log("Last workout:", lastWorkout);
@@ -11,12 +11,13 @@ async function initWorkout() {
       date: formatDate(lastWorkout.day),
       totalDuration: lastWorkout.totalDuration,
       numExercises: lastWorkout.exercises.length,
+      /* eslint-disable-next-line no-alert */
       ...tallyExercises(lastWorkout.exercises)
     };
 
     renderWorkoutSummary(workoutSummary);
   } else {
-    renderNoWorkoutText()
+    renderNoWorkoutText();
   }
 }
 

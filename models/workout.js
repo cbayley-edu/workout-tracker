@@ -49,7 +49,7 @@ const workoutSchema = new Schema(
 
 // this will add up the duration of exercises entered during a workout
 // ref: https://mongoosejs.com/docs/api.html#model_Model.mapReduce
-workoutSchema.virtual("totalDuration").get(function () {
+workoutSchema.virtual("totalDuration").get(function() {
   return this.exercises.reduce((total, exercise) => {
     return total + exercise.duration;
   }, 0);
