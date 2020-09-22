@@ -1,57 +1,93 @@
-# Unit 17 Nosql Homework: Workout Tracker
+# Workout Tracker
 
-For this assignment, you'll create a workout tracker. You have already been provided with the front end code in the `Develop` folder. This assignment will require you to create Mongo database with a Mongoose schema and handle routes with Express.
+### Unit 17: NoSQL Homework
 
-## User Story
+### User Story
 
-* As a user, I want to be able to view create and track daily workouts. I want to be able to log multiple exercises in a workout on a given day. I should also be able to track the name, type, weight, sets, reps, and duration of exercise. If the exercise is a cardio exercise, I should be able to track my distance traveled.
+* As a user, I want to be able to view create and track daily workouts. 
+* I want to be able to log multiple exercises in a workout on a given day. 
+* I should also be able to track the name, type, weight, sets, reps, and duration of exercise. 
+* If the exercise is a cardio exercise, I should be able to track my distance traveled.
 
-## Business Context
+## Description
 
-A consumer will reach their fitness goals more quickly when they track their workout progress.
+Use the workout tracker to enter your daily Resistance and Cardio exercises for a single workout. There is dashboard included as well that shows your progress.
 
-## Acceptance Criteria
+Access the deployed Heroku app here: https://workout-tracker-92233.herokuapp.com/ 
 
-When the user loads the page, they should be given the option to create a new workout or continue with their last workout.
+Access the git repo here: https://github.com/cbayley-edu/workout-tracker
 
-The user should be able to:
 
-  * Add exercises to a previous workout plan.
+## Table of Contents 
 
-  * Add new exercises to a new workout plan.
+* [Installation](#installation)
+* [Usage](#usage)
+* [License](#license)
+* [Questions](#questions)
 
-  * View the combined weight of multiple exercises on the `stats` page.
 
-To deploy an application with a MongoDB database to Heroku, you'll need to set up a MongoDB Atlas account and connect a database from there to your application. Be sure to use the following guides for support:
+## Installation 
 
-  * [Set Up MongoDB Atlas](../04-Supplemental/MongoAtlas-Setup.md)
+Since this is a Heroku app, there is no installation required however, if you want to clone or fork my github repo, feel free to do so. You'll have to setup your own MongoDB and add it to your Heroku variables to store your own data.
 
-  * [Deploy with Heroku and MongoDB Atlas](../04-Supplemental/MongoAtlas-Deploy.md)
+If you do fork my repo, you'll need to run npm install to install the necessary files to run the app locally as well as having the mongo service running locally.
 
-## Commit Early and Often
+## Usage
 
-One of the most important skills to master as a web developer is version control. Building the habit of committing via Git is important for the following two reasons:
+Visit the Heroku app URL to use the application: https://workout-tracker-92233.herokuapp.com/ 
 
-1. Your commit history is a signal to employers that you are actively working on projects and learning new skills.
+Since there are existing workouts, you'll see the stats from the last workout.
 
-2. Your commit history allows you to revert your codebase in the event that you need to return to a previous state.
+![workout-tracker](./assets/workout-tracker.png)
 
-Follow these guidelines for committing:
+To add an exercise to the existing workout, click 'Continue Workout'. To create a new workout, click 'New Workout'.
 
-* Make single-purpose commits for related changes to ensure a clean, manageable history. If you are fixing two issues, make two commits.
+![add-workout](./assets/add-workout.png)
 
-* Write descriptive, meaningful commit messages so that you and anyone else looking at your repository can easily understand its history.
+Select your exercise type - Resistance or Cardio.
 
-* Don't commit half-done work, for the sake of your collaborators (and your future self!).
+![select-type](./assets/select-type.png)
 
-* Test your application before you commit to ensure functionality at every step in the development process.
+For Resistance, you will have the ability to enter the Name, Weight (in pounds), the number of Sets and Reps, and the Duration (in minutes). To add an additional exercise to the workout, click 'Add Exercise'.
 
-We want you to have well over 200 commits by graduation, so commit early and often!
+![add-exercise](./assets/add-exercise.png)
 
-## Submission on BCS
+For Cardio, you will have the ability to enter the Name, Distance (in miles), and the Duration (in minutes). To complete your workout, click 'Complete'.
 
-You are required to submit the following:
+![complete-workout](./assets/complete-workout.png)
 
-* The URL to the deployed application
+After you complete your workout, you will return to the Fitness Tracker page and again, you will see the stats from your last workout. As you can see, the two exercises are summaried together as one workout.
 
-* The URL to the GitHub repository
+![workout-summary](./assets/workout-summary.png)
+
+In addition to the last workout/day summary, you can also view a dashboard of your workouts for the past week. Click on 'Fitness Tracker Dashboard' to view the data visualization.
+
+![access-dashboard](./assets/access-dashboard.png)
+
+On the left side of the dashboard you will see a line graph showing the Total Duration in Minutes by day for the past week. Below the line graph you will see a pie chart broken down by the type of exercise. On the right side of the dashboard you will see a bar chart showing the Total Pounds Lifted by day for the past week. Below the bar chart you will see a doughnut graph broken down by the type of resistence exercise (you'll notice that cardio exercises are listed with a line through them since no pounds are entered for cardio).
+
+![view-dashboard](./assets/view-dashboard.png)
+
+From the Dashboard, you can return to the Fitness Tracker screen by clicking 'Fitness Tracker' in the upper left corner.
+
+![return-to-workout-tracker](./assets/return-to-workout-tracker.png)
+
+This will take you back to the last workout/day summary screen where you can add an exercise to your current workout or start a new workout.
+
+![workout-summary-end](./assets/workout-summary-end.png)
+
+
+## License 
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+This project is covered by the above license(s). Click on the badge for more information.
+
+
+## Questions 
+
+GitHub username: cbayley-edu
+GitHub profile link: https://github.com/cbayley-edu
+
+Please email me at christinabayley@comcast.net with any questions you have or any issues you come across.
+
