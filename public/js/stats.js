@@ -6,6 +6,7 @@ fetch("/api/workouts/range")
     return response.json();
   })
   .then(data => {
+    console.log(data);
     populateChart(data);
   });
 
@@ -33,6 +34,26 @@ function generatePalette() {
 
   return arr;
 }
+
+const d = new Date();
+const weekday = [
+  "Sunday",
+  "Monday",
+  "Tuesday",
+  "Wednesday",
+  "Thursday",
+  "Friday",
+  "Saturday"
+];
+
+const today = weekday[d.getDay()];
+const todayMinusOne = weekday[d.getDay(d.setDate(d.getDate() - 1))];
+const todayMinusTwo = weekday[d.getDay(d.setDate(d.getDate() - 1))];
+const todayMinusThree = weekday[d.getDay(d.setDate(d.getDate() - 1))];
+const todayMinusFour = weekday[d.getDay(d.setDate(d.getDate() - 1))];
+const todayMinusFive = weekday[d.getDay(d.setDate(d.getDate() - 1))];
+const todayMinusSix = weekday[d.getDay(d.setDate(d.getDate() - 1))];
+
 function populateChart(data) {
   const durations = duration(data);
   const pounds = calculateTotalWeight(data);
@@ -48,13 +69,13 @@ function populateChart(data) {
     type: "line",
     data: {
       labels: [
-        "Sunday",
-        "Monday",
-        "Tuesday",
-        "Wednesday",
-        "Thursday",
-        "Friday",
-        "Saturday"
+        todayMinusSix,
+        todayMinusFive,
+        todayMinusFour,
+        todayMinusThree,
+        todayMinusTwo,
+        todayMinusOne,
+        today
       ],
       datasets: [
         {
@@ -96,13 +117,13 @@ function populateChart(data) {
     type: "bar",
     data: {
       labels: [
-        "Sunday",
-        "Monday",
-        "Tuesday",
-        "Wednesday",
-        "Thursday",
-        "Friday",
-        "Saturday"
+        todayMinusSix,
+        todayMinusFive,
+        todayMinusFour,
+        todayMinusThree,
+        todayMinusTwo,
+        todayMinusOne,
+        today
       ],
       datasets: [
         {
@@ -189,12 +210,15 @@ function populateChart(data) {
 function duration(data) {
   const durations = [];
 
+  // data.forEach(workout => {
+  //   durations.push(workout.totalDuration);
+  // });
+
   data.forEach(workout => {
     workout.exercises.forEach(exercise => {
       durations.push(exercise.duration);
     });
   });
-
   return durations;
 }
 
