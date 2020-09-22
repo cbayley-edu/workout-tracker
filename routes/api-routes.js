@@ -55,10 +55,13 @@ module.exports = function(app) {
       });
   });
 
+  const sevenDaysAgo = new Date();
+  sevenDaysAgo.setDate(sevenDaysAgo.getDate() - 7);
   // getWorkoutsInRange()
   app.get("/api/workouts/range", (req, res) => {
-    Workout.find()
+    Workout.find({ day: { $gte: sevenDaysAgo } })
       .then(data => {
+        console.log(sevenDaysAgo);
         res.json(data);
       })
       .catch(err => {
