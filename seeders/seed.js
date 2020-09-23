@@ -13,8 +13,8 @@ const workoutSeed = [
       {
         type: "resistance",
         name: "Bicep Curl",
-        duration: 20,
-        weight: 100,
+        duration: 30,
+        weight: 40,
         reps: 10,
         sets: 4
       }
@@ -26,8 +26,8 @@ const workoutSeed = [
       {
         type: "resistance",
         name: "Lateral Pull",
-        duration: 20,
-        weight: 300,
+        duration: 40,
+        weight: 60,
         reps: 10,
         sets: 4
       }
@@ -63,8 +63,8 @@ const workoutSeed = [
       {
         type: "resistance",
         name: "Bench Press",
-        duration: 20,
-        weight: 285,
+        duration: 35,
+        weight: 150,
         reps: 10,
         sets: 4
       }
@@ -76,8 +76,8 @@ const workoutSeed = [
       {
         type: "resistance",
         name: "Bench Press",
-        duration: 20,
-        weight: 300,
+        duration: 35,
+        weight: 75,
         reps: 10,
         sets: 4
       }
@@ -89,8 +89,8 @@ const workoutSeed = [
       {
         type: "resistance",
         name: "Quad Press",
-        duration: 30,
-        weight: 300,
+        duration: 15,
+        weight: 80,
         reps: 10,
         sets: 4
       }
@@ -103,7 +103,7 @@ const workoutSeed = [
         type: "resistance",
         name: "Bench Press",
         duration: 20,
-        weight: 300,
+        weight: 125,
         reps: 10,
         sets: 4
       }
@@ -115,8 +115,97 @@ const workoutSeed = [
       {
         type: "resistance",
         name: "Military Press",
+        duration: 25,
+        weight: 250,
+        reps: 10,
+        sets: 4
+      }
+    ]
+  },
+  {
+    day: new Date(new Date().setDate(new Date().getDate() - 1)),
+    exercises: [
+      {
+        type: "resistance",
+        name: "Bicep Curl",
         duration: 20,
-        weight: 300,
+        weight: 60,
+        reps: 10,
+        sets: 4
+      }
+    ]
+  },
+  {
+    day: new Date(new Date().setDate(new Date().getDate())),
+    exercises: [
+      {
+        type: "resistance",
+        name: "Lateral Pull",
+        duration: 40,
+        weight: 60,
+        reps: 10,
+        sets: 4
+      }
+    ]
+  },
+  {
+    day: new Date(new Date().setDate(new Date().getDate() + 1)),
+    exercises: [
+      {
+        type: "resistance",
+        name: "Push Press",
+        duration: 25,
+        weight: 205,
+        reps: 8,
+        sets: 4
+      }
+    ]
+  },
+  {
+    day: new Date(new Date().setDate(new Date().getDate() + 2)),
+    exercises: [
+      {
+        type: "cardio",
+        name: "Swimming",
+        duration: 50,
+        distance: 1
+      }
+    ]
+  },
+  {
+    day: new Date(new Date().setDate(new Date().getDate() + 3)),
+    exercises: [
+      {
+        type: "resistance",
+        name: "Quad Press",
+        duration: 20,
+        weight: 100,
+        reps: 10,
+        sets: 4
+      }
+    ]
+  },
+  {
+    day: new Date(new Date().setDate(new Date().getDate() + 4)),
+    exercises: [
+      {
+        type: "resistance",
+        name: "Bench Press",
+        duration: 15,
+        weight: 75,
+        reps: 10,
+        sets: 4
+      }
+    ]
+  },
+  {
+    day: new Date(new Date().setDate(new Date().getDate() + 5)),
+    exercises: [
+      {
+        type: "resistance",
+        name: "Military Press",
+        duration: 15,
+        weight: 150,
         reps: 10,
         sets: 4
       }
